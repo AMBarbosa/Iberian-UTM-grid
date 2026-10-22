@@ -14,6 +14,10 @@ utm3132 <- terra::vect("/home/marcia/Documents/dadosExternos/OGUs/EDIT_geoplatfo
 
 utm2932 <- utm2930 + utm3132
 
+terra::crs(utm2932)
+
+terra::set.crs(utm2932, "EPSG:4326")
+
 terra::plot(utm2932, "HUSO", lwd = 0.1)
 
 
